@@ -15,9 +15,11 @@
         <div class="card-body">
             <form th:action="@{/students/save}" th:object="${student}" method="post">
 
+                <input type="hidden" th:field="*{id}" class="form-control" required>
+
                 <div class="mb-3">
                     <label>Mã số sinh viên</label>
-                    <input type="text" th:field="*{id}" class="form-control" required>
+                    <input type="text" th:field="*{studentId}" class="form-control" required>
                 </div>
 
                 <div class="mb-3">
